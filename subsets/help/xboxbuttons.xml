@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<theme>
+	<formatVersion>7</formatVersion>
+	<include>./default.xml</include>
+	<view name="system,screen,detailed">
+		<helpsystem name="help">
+			<iconA>./../../art/help/xbox/button_b.svg</iconA>
+			<iconB>./../../art/help/xbox/button_a.svg</iconB>
+			<iconX>./../../art/help/xbox/button_y.svg</iconX>
+			<iconY>./../../art/help/xbox/button_x.svg</iconY>
+		</helpsystem>
+		<controllerActivity name="controllerActivity">
+			<size>0.035</size>
+			<imagePath>./../../art/help/xbox/controller.svg</imagePath>
+		</controllerActivity>
+	</view>
+</theme>

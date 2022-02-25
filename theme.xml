@@ -1,0 +1,379 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Theme: SynthWave
+author: Riskeynewt356
+license: creative commons CC-BY-NC-SA
+structure/flow originally based on: "simple_life" by Hel Mic
+console artwork originally based on: "es-theme-carbon" by Fabrice CARUSO
+help icons originally based on: "ckau-book" by Ckau
+"es-theme-carbon" originally based on: "Carbon" by Eric Hettervik (Rookervik)
+originally based on: "simple" by nils bonenberger
+-->
+<theme>
+<formatVersion>7</formatVersion>
+
+<!-- Theme configuration -->
+<subset name="helpsystem" displayName="${helpSubsetName}">
+	<include name="positional" displayName="Positional">./subsets/help/positional.xml</include>
+	<include name="xboxbuttons" displayName="Xbox">./subsets/help/xboxbuttons.xml</include>
+	<include name="psxbuttons" displayName="PlayStation">./subsets/help/psxbuttons.xml</include>
+	<include name="psxbuttons_color" displayName="PlayStation Color">./subsets/help/psxbuttons_color.xml</include>
+	<include name="arcadebuttons" displayName="Arcade">./subsets/help/arcadebuttons.xml</include>
+	<include name="standard" displayName="Default">./subsets/help/default.xml</include>
+</subset>
+
+
+<!-- Global -->
+<view name="screen">
+	<text name="clock">
+		<pos>0.9 0.009</pos>
+		<size>0 0</size>
+		<fontSize>0.03</fontSize>
+	</text>
+
+	<controllerActivity name="controllerActivity">
+		<pos>0.014 0.01</pos>
+	</controllerActivity>
+</view>
+
+
+<!-- Pop Up Menu -->
+<view name="menu">
+	<!-- Current menu's title at the top -->
+	<menuText name="menutitle">
+		<fontPath>./assets/Quicksilver Italic.ttf</fontPath>
+		<fontSize>0.06</fontSize>
+		<color>ffffff</color>
+	</menuText>
+
+	<!-- Batocera version information in Main Menu -->
+	<menuText name="menufooter">
+		<fontPath>./assets/SST.ttf</fontPath>
+		<fontSize>0.02</fontSize>
+	</menuText>
+
+	<!-- Labels for all the buttons -->
+	<menuText name="menutext">
+		<fontPath>./assets/TheNextFont.ttf</fontPath>
+		<fontSize>0.036</fontSize>
+		<!-- Main unselected item text colour -->
+		<color>B970CB</color>
+		<!-- Top of the gradient for the selected item -->
+		<selectorColor>5342B3</selectorColor>
+		<!-- Bottom of the gradient for the selected item -->
+		<selectorColorEnd>0D0C1A</selectorColorEnd>
+		<!-- Selected item text colour -->
+		<selectedColor>E487FC</selectedColor>
+		<separatorColor>0C3F53</separatorColor>
+	</menuText>
+
+	<menuTextSmall name="menutextsmall">
+		<fontPath>./assets/SST.ttf</fontPath>
+		<fontSize>0.02</fontSize>
+	</menuTextSmall>
+
+	<!-- Box which the menu is drawn on top of -->
+	<menuBackground name="menubg">
+		<color>111111</color>
+		<cornerSize>48 48</cornerSize>
+		<path>./assets/frame.png</path>
+	</menuBackground>
+
+	<!-- Cute little pictures next to the text labels -->
+	<menuIcons name="menuicons">
+		<iconKodi>./art/icons/Kodi.png</iconKodi>
+		<iconSystem>./art/icons/System.png</iconSystem>
+		<iconUpdates>./art/icons/Updates.png</iconUpdates>
+		<iconGames>./art/icons/Games.png</iconGames>
+		<iconControllers>./art/icons/Controllers.png</iconControllers>
+		<iconUI>./art/icons/UI.png</iconUI>
+		<iconSound>./art/icons/Sound.png</iconSound>
+		<iconNetwork>./art/icons/Network.png</iconNetwork>
+		<iconScraper>./art/icons/Scraper.png</iconScraper>
+		<iconAdvanced>./art/icons/Advanced.png</iconAdvanced>
+		<iconQuit>./art/icons/Quit.png</iconQuit>
+		<iconRestart>./art/icons/Restart.png</iconRestart>
+		<iconShutdown>./art/icons/Shutdown.png</iconShutdown>
+		<iconFastShutdown>./art/icons/Fastshutdown.png</iconFastShutdown>
+		<iconRetroachievements>./art/icons/Contest.png</iconRetroachievements>
+		<iconManual>./art/icons/Manual.png</iconManual>
+	</menuIcons>
+</view>
+
+<!-- System list -->
+<view name="system">
+	<image name="staticBackground">
+		<size>1 1</size>
+		<pos>0 0</pos>
+		<origin>0 0</origin>
+		<tile>false</tile>
+		<linearSmooth>true</linearSmooth>
+		<path>./assets/bg.jpg</path>
+		<zIndex>0</zIndex>
+	</image>
+
+	<!-- System list logos -->
+	<image name="logo">
+		<!-- Search for the SVG first. -->
+		<path>./art/logos/${system.theme}.svg</path>
+		<!-- Then fall back to the PNG. -->
+		<path>./art/logos/${system.theme}.png</path>
+	</image>
+
+	<!-- Console pictures -->
+	<image name="console" extra="true">
+		<pos>0.04 0.04</pos>
+		<origin>0 0</origin>
+		<maxSize>0.44 0.5</maxSize>
+		<path>./art/consoles/${system.theme}.png</path>
+		<path>./art/consoles/${system.theme}.jpg</path>
+		<zIndex>160</zIndex>
+	</image>
+
+	<!-- Fallback when image is not present -->
+	<text name="logoText">
+		<fontPath>./assets/Quicksilver Italic.ttf</fontPath>
+		<fontSize>0.056</fontSize>
+		<color>ffffffff</color>
+	</text>
+
+	<!-- System scroll -->
+	<carousel name="systemcarousel">
+		<type>vertical</type>
+		<pos>0.637 0.12</pos>
+		<size>1 0.7</size>
+		<origin>0 0</origin>
+		<color>00000000</color>
+		<logoScale>0.9</logoScale>
+		<logoSize>0.25 0.155</logoSize>
+		<logoPos>0 0.28</logoPos>
+		<maxLogoCount>4.5</maxLogoCount>
+	</carousel>
+	<!-- in the future, add logoBackground to this -->
+
+	<!-- Total games info -->
+	<text name="systemInfo">
+		<pos>0.264 0.78</pos>
+		<size>1 0.25</size>
+		<backgroundColor>00000000</backgroundColor>
+		<color>ffffff</color>
+		<fontPath>./assets/SST.ttf</fontPath>
+		<fontSize>0.03</fontSize>
+	</text>
+
+	<!-- Video/snapshot preview -->
+	<video name="videobox" extra="true">
+		<path>{random}</path>
+		<effect>none</effect>
+		<delay>0.3</delay>
+		<origin>0.3 0.7</origin>
+		<pos>0.205 0.83</pos>
+		<maxSize>0.37</maxSize>
+		<zIndex>160</zIndex>
+	</video>
+</view>
+
+
+<!-- Romlist view -->
+<view name="detailed">
+	<image name="background" extra="true">
+		<size>1 1</size>
+		<pos>0 0</pos>
+		<origin>0 0</origin>
+		<path>./assets/gamelist.jpg</path>
+		<zIndex>0</zIndex>
+		<color>CCCCCC</color>
+	</image>
+
+	<!-- Console picture -->
+	<image name="console" extra="true">
+		<pos>0.04 0.04</pos>
+		<origin>0 0</origin>
+		<maxSize>0.2 0.5</maxSize>
+		<path>./art/consoles/${system.theme}.png</path>
+		<path>./art/consoles/${system.theme}.jpg</path>
+		<zIndex>160</zIndex>
+	</image>
+
+	<!-- Console logo -->
+	<image name="logo">
+		<pos>0.04 0.38</pos>
+		<origin>0 0</origin>
+		<maxSize>0.2 0.5</maxSize>
+		<!-- Search for the SVG first. -->
+		<path>./art/logos/${system.theme}.svg</path>
+		<!-- Then fall back to the PNG. -->
+		<path>./art/logos/${system.theme}.png</path>
+	</image>
+
+	<!-- Fallback when image is not present -->
+	<text name="logoText">
+		<fontPath>./assets/Quicksilver Italic.ttf</fontPath>
+		<fontSize>0.056</fontSize>
+		<color>ffffffff</color>
+	</text>
+
+	<!-- Game cover -->
+	<image name="md_thumbnail">
+		<origin>0 0</origin>
+		<pos>0.26 0.1</pos>
+		<maxSize>0.235 0.4</maxSize>
+		<alignment>center</alignment>
+	</image>
+
+	<!-- Preview video/snapshot -->
+	<video name="md_video">
+		<origin>0.5 0.5</origin>
+		<pos>0.74 0.278</pos>
+		<maxSize>0.347 0.432</maxSize>
+		<delay>0.7</delay>
+		<showSnapshotNoVideo>true</showSnapshotNoVideo>
+		<showSnapshotDelay>true</showSnapshotDelay>
+		<snapshotSource>image</snapshotSource>
+	</video>
+
+	<!-- Description -->
+	<text name="md_description">
+		<pos>0.525 0.59</pos>
+		<size>0.448 0.18</size>
+		<color>ffffff</color>
+		<fontSize>0.022</fontSize>
+		<fontPath>./assets/SST.ttf</fontPath>
+	</text>
+
+	<!-- Gamelist -->
+	<textlist name="gamelist">
+		<selectorColor>9E55AA</selectorColor>
+		<selectorColorEnd>9E55AA</selectorColorEnd>
+		<selectedColor>ffffff</selectedColor>
+		<primaryColor>ffffff</primaryColor>
+		<secondaryColor>ffffff</secondaryColor>
+		<fontPath>./assets/SST.ttf</fontPath>
+		<fontSize>0.026</fontSize>
+		<pos>0.03 0.588</pos>
+		<size>0.45 0.34</size>
+		<alignment>left</alignment>
+		<horizontalMargin>0.01</horizontalMargin>
+		<origin>0 0</origin>
+		<lineSpacing>2.1</lineSpacing>
+		<selectorImagePath>./assets/box.png</selectorImagePath>
+		<selectorOffsetY>-0.01</selectorOffsetY>
+		<selectorHeight>0.052</selectorHeight>
+	</textlist>
+
+	<!-- Lower-right metadata box -->
+	<image name="md_marquee">
+		<pos>0.88 0.84</pos>
+		<maxSize>0.182 0.114</maxSize>
+		<origin>0.5 0.5</origin>
+	</image>
+
+	<text name="md_lbl_developer">
+		<pos>0.467 0.792</pos>
+		<size>0.125 0.10</size>
+		<alignment>right</alignment>
+		<color>ffffff</color>
+		<fontSize>0.022</fontSize>
+		<fontPath>./assets/SST.ttf</fontPath>
+	</text>
+
+	<text name="md_developer">
+		<pos>0.59 0.8327</pos>
+		<size>0.094 0.02</size>
+		<alignment>left</alignment>
+		<color>ffffff</color>
+		<fontSize>0.022</fontSize>
+		<fontPath>./assets/SST.ttf</fontPath>
+	</text>
+
+	<text name="md_lbl_publisher">
+		<pos>0.463 0.83</pos>
+		<size>0.125 0.10</size>
+		<alignment>right</alignment>
+		<color>ffffff</color>
+		<fontSize>0.022</fontSize>
+		<fontPath>./assets/SST.ttf</fontPath>
+	</text>
+
+	<text name="md_publisher">
+		<pos>0.586 0.83</pos>
+		<size>0.125 0.10</size>
+		<alignment>left</alignment>
+		<color>ffffff</color>
+		<fontSize>0.022</fontSize>
+		<fontPath>./assets/SST.ttf</fontPath>
+	</text>
+
+	<text name="md_lbl_genre">
+		<pos>0.444 0.756</pos>
+		<size>0.125 0.10</size>
+		<alignment>right</alignment>
+		<color>ffffff</color>
+		<fontSize>0.022</fontSize>
+		<fontPath>./assets/SST.ttf</fontPath>
+	</text>
+
+	<text name="md_genre">
+		<pos>0.57 0.7964</pos>
+		<size>0.108 0.02</size>
+		<alignment>left</alignment>
+		<color>ffffff</color>
+		<fontSize>0.022</fontSize>
+		<fontPath>./assets/SST.ttf</fontPath>
+	</text>
+
+	<text name="md_lbl_players">
+		<pos>0.607 0.83</pos>
+		<size>0.125 0.10</size>
+		<alignment>right</alignment>
+		<color>ffffff</color>
+		<fontSize>0.022</fontSize>
+		<fontPath>./assets/SST.ttf</fontPath>
+	</text>
+
+	<text name="md_players">
+		<pos>0.73 0.83</pos>
+		<size>0.125 0.10</size>
+		<alignment>left</alignment>
+		<color>ffffff</color>
+		<fontSize>0.022</fontSize>
+		<fontPath>./assets/SST.ttf</fontPath>
+	</text>
+
+	<text name="md_lbl_playcount">
+		<pos>0.64 0.792</pos>
+		<size>0.125 0.10</size>
+		<alignment>right</alignment>
+		<color>ffffff</color>
+		<fontSize>0.022</fontSize>
+		<fontPath>./assets/SST.ttf</fontPath>
+	</text>
+
+	<text name="md_playcount">
+		<pos>0.764 0.792</pos>
+		<size>0.125 0.10</size>
+		<alignment>left</alignment>
+		<color>ffffff</color>
+		<fontSize>0.022</fontSize>
+		<fontPath>./assets/SST.ttf</fontPath>
+	</text>
+
+	<text name="md_lbl_rating">
+		<pos>0.68 0.7575</pos>
+		<size>0.125 0.10</size>
+		<alignment>left</alignment>
+		<color>ffffff</color>
+		<fontSize>0.022</fontSize>
+		<fontPath>./assets/SST.ttf</fontPath>
+	</text>
+
+	<rating name="md_rating">
+		<pos>0.67 0.783</pos>
+		<alignment>left</alignment>
+		<color>ffffff</color>
+		<scale>0.45</scale>
+		<filledPath>./art/rating_filled.svg</filledPath>
+		<unfilledPath>./art/rating_unfilled.svg</unfilledPath>
+	</rating>
+</view>
+</theme>
