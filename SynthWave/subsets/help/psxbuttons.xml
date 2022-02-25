@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<theme>
+	<formatVersion>7</formatVersion>
+	<include>./default.xml</include>
+	<view name="system,screen,detailed">
+		<helpsystem name="help">
+			<iconA>./../../art/help/playstation/button_circle.svg</iconA>
+			<iconB>./../../art/help/playstation/button_cross.svg</iconB>
+			<iconX>./../../art/help/playstation/button_triangle.svg</iconX>
+			<iconY>./../../art/help/playstation/button_square.svg</iconY>
+			<iconUpDown>./../../art/help/playstation/updown.svg</iconUpDown>
+			<iconLeftRight>./../../art/help/playstation/leftright.svg</iconLeftRight>
+			<iconUpDownLeftRight>./../../art/help/playstation/all.svg</iconUpDownLeftRight>
+			<iconStart>./../../art/help/playstation/start.svg</iconStart>
+			<iconSelect>./../../art/help/playstation/select.svg</iconSelect>
+		</helpsystem>
+		<controllerActivity name="controllerActivity">
+			<size>0.035</size>
+			<imagePath>./../../art/help/playstation/controller.svg</imagePath>      
+			<backgroundColor>000000</backgroundColor>
+		</controllerActivity>
+	</view>
+</theme>
