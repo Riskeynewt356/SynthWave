@@ -7,7 +7,7 @@ author: Riskeynewt356
 
 license: creative commons CC-BY-NC-SA
 
-structure/flow originally based on: "simple_life" by Hel Mic
+structure/flow originally based on: "simple_life" by Mr. Overlay
 
 console artwork originally based on: "es-theme-carbon" by Fabrice CARUSO
 
