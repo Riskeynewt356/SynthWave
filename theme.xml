@@ -3,7 +3,7 @@
 Theme: SynthWave
 author: Riskeynewt356
 license: creative commons CC-BY-NC-SA
-structure/flow originally based on: "simple_life" by Hel Mic
+structure/flow originally based on: "simple_life" by Mr. Overlay
 console artwork originally based on: "es-theme-carbon" by Fabrice CARUSO
 help icons originally based on: "ckau-book" by Ckau
 "es-theme-carbon" originally based on: "Carbon" by Eric Hettervik (Rookervik)
@@ -368,7 +368,7 @@ originally based on: "simple" by nils bonenberger
 	</text>
 
 	<rating name="md_rating">
-		<pos>0.67 0.783</pos>
+		<pos>0.69 0.783</pos>
 		<alignment>left</alignment>
 		<color>ffffff</color>
 		<scale>0.45</scale>
